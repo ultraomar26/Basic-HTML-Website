@@ -1,91 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=divice-width, initial-scale=1.0">
-<style>
-body{
-    color:rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-
-}
-h1{
-    text-align: center;
-    margin: 140px;
-}
-h4{
-    position: absolute;
-    top: 10px;
-    left: 6px;
-    border: 3px solid rgb(18, 223, 45);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: large;
-}
-nav{
-    padding: 10px;
-    background-color: rgb(255, 255, 255);
-    color : black;
-    position: absolute;
-    top: 10px;
-    right: 6px;
-}
-nav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li{
-    margin-right: 20px;
-}
-nav ul li a:hover {
-    text-decoration: underline ;
-    color: rgb(18, 223, 45);
-}
-
-#projects ul li{
-    list-style-type: none;
-    margin: 20px;
-    font-size: 20px;
-    position: relative;
-    right: 50px;
-    border: 2px solid ;
-    padding: 5px;
-    width: 250px;
-    margin: 0px;
-}
-#projects ul li:hover {
-    background-color: rgb(100, 12, 240);
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-</style>
 <head>
-<title> my project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Portfolio</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #fff;
+            color: #000;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            border: 2px solid #222;
+            padding: 20px;
+            background: #fff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #222;
+            padding-bottom: 10px;
+        }
+        .logo-name {
+            display: flex;
+            align-items: center;
+        }
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background: #222;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .nav {
+            font-size: 18px;
+        }
+        .nav a {
+            color: #000;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+        .nav a:not(:last-child):after {
+            content: '/';
+            margin-left: 18px;
+        }
+        .main-title {
+            text-align: center;
+            margin: 40px 0 10px 0;
+            font-size: 2.5em;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .three-col {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .col {
+            flex: 1;
+            border: 2px solid #222;
+            padding: 18px 16px;
+            min-height: 260px;
+            background: #fff;
+        }
+        .col h3 {
+            margin-top: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .projects-list {
+            list-style: none;
+            padding: 0;
+        }
+        .projects-list li {
+            border: 1px solid #222;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            background: #fff;
+        }
+        .projects-list li:last-child {
+            margin-bottom: 0;
+        }
+        .work-section {
+            margin-bottom: 18px;
+        }
+        .work-section:last-child {
+            margin-bottom: 0;
+        }
+        .work-section a {
+            color: #1a0dab;
+            font-size: 0.98em;
+            display: block;
+            margin-top: 4px;
+        }
+        .edu-list {
+            margin: 10px 0 0 0;
+            padding-left: 18px;
+        }
+        .reviews-title {
+            font-size: 1.3em;
+            margin: 30px 0 18px 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .reviews-row {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .review-card {
+            flex: 1;
+            border: 2px solid #222;
+            border-radius: 18px;
+            padding: 18px 14px;
+            background: #fff;
+            min-height: 90px;
+        }
+        .review-author {
+            color: #bbb;
+            margin-top: 18px;
+            font-size: 0.98em;
+        }
+        .footer {
+            text-align: center;
+            color: #000;
+            font-size: 1.1em;
+            margin-top: 18px;
+            padding-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>frontend devrloper</h1>
-    <h4>omar elsayed</h4>
-    <nav>
-         <ul> 
-            <li><a href="projects.html"> Projects</a></li>
-            <li><a href="articels.html"> Articles</a></li>
-            <li><a href="contact.html"> Contact</a></li>
-        </ul>
-    </nav>
-    <div id="projects">
-        <ul>
-            <li>project</li>
-            <li>Calculator</li>
-            <li>Countdown Timer</li>
-            <li>Product Upcoming Page</li>
-        </ul>
-    </div>
-    <div id="work-experience">
-        <p>(roadmap.sh) solved 1 frontend project<a href="https://roadmap.sh/befriend?u=68641e321ed6bc62a2e43080"> visit my profile</a>
-        </p>
-        <p>open source work <a href="https://github.com/your-profile"> visit my githubprofile</a></p>
+    <div class="container">
+        <div class="header">
+            <div class="logo-name">
+                <div class="logo-box"></div>
+                <span>omar elsayed</span>
+            </div>
+            <div class="nav">
+                <a href="homepage.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="articles.html">Articles</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="main-title">Frontend Developer</div>
+        <div class="subtitle">html only with proper layout, no styling</div>
+        <div class="three-col">
+            <div class="col">
+                <h3>Projects</h3>
+                <ul class="projects-list">
+                    <li>HTML Only Portfolio</li>
+                    <li>Calculator</li>
+                    <li>Quiz App</li>
+                    <li>Countdown Timer</li>
+                    <li>Product Upcoming Page</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Work Experience</h3>
+                <div class="work-section">
+                    <strong>roadmap.sh</strong><br>
+                    Solved all the frontend projects<br>
+                    <a href="roadmap.sh/u/ultra
+                    ">Visit my Profile</a>
+                </div>
+                <div class="work-section">
+                    <strong>OpenSource Work</strong><br>
+                    Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.<br>
+                    <a href="https://github.com/ultraomar26">Visit my GitHub Profile</a>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Education</h3>
+                Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.<br>
+                <div style="margin-top:10px;">Courses I took:</div>
+                <ul class="edu-list">
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                    <li>Discreet Mathematics</li>
+                </ul>
+            </div>
+        </div>
+        <div class="reviews-title">Reviews from my Teachers</div>
+        <div class="reviews-row">
+            <div class="review-card">
+                John doe was a brilliant student; always stood out with his assignments.
+                <div class="review-author">Jane Doe<br>Assistant Professor</div>
+            </div>
+            <div class="review-card">
+                John doe was a brilliant student; always stood out with his assignments.
+                <div class="review-author">Jane Doe<br>Assistant Professor</div>
+            </div>
+            <div class="review-card">
+                John doe was a brilliant student; always stood out with his assignments.
+                <div class="review-author">Jane Doe<br>Assistant Professor</div>
+            </div>
+        </div>
+        <div class="footer">&copy; all rights reserved 2025</div>
     </div>
 </body>
 </html>
